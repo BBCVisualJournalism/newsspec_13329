@@ -1,0 +1,32 @@
+/* separate your sass into different files to keep it maintainable!  */
+.main {
+    color: #222;
+    line-height: 1.25;
+    
+    img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@include respondMinMax(600px, false) {
+    .main {
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .container {
+        width: 592px;
+    }
+}
