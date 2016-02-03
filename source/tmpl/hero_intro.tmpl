@@ -8,18 +8,22 @@
 </section>
 
 <section class="section section-intro">
-    <div class="story-meta">
-        <ul>
-            <li class="timestamp"><time class="date">{{= timestamp }}</time></li>
-            <li class="topic"><a href="{{= topic_link }}">{{= topic_label }}</a></li>
-        </ul>
-    </div>
-
     <div class="container">
+        <div class="story_meta">
+            <ul class="story_meta_list">
+                <!--<li class="story_meta_list_item story_meta_list_item-timestamp"><time class="date">{{= timestamp }}</time></li>
+                <li class="story_meta_list_item story_meta_list_item-topic"><a href="{{= topic_link }}">{{= topic_label }}</a></li>-->
+                <li class="story_meta_list_item story_meta_list_item-timestamp"><time class="date">2016-02-14</time></li>
+                <li class="story_meta_list_item story_meta_list_item-topic"><a href="#">News</a></li>
+            </ul>
+        </div>
+
         <p>{{= section_1_intro_paragraph }}</p>
         
-        <h2 class="map_title">{{= section_1_map_title }}</h2>
-        <img src="http://placehold.it/616x350">
+        <div class="worldmap">
+            <p class="worldmap_title">{{= section_1_map_title }}</p>
+            <img class="worldmap_map" src="{{= pathStatic }}/{{= vocab_dir }}/img/world_map_624.png" alt="{{= section_1_map_alt }}">
+        </div>
 
         <div class="app-popularity-chart">
             <div class="app-popularity-chart_bar app-popularity-chart_bar-1">

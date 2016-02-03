@@ -1,0 +1,244 @@
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ccc;
+    background-position: left center;
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 40%;
+    @media (max-aspect-ratio: 1/1) {
+        padding-bottom: 67%;
+    }
+    @media (max-aspect-ratio: 8/10) and (min-width: 320px) {
+        padding-bottom: 100%;
+    }
+    @media (max-aspect-ratio: 1/1) and (min-width: 480px) {
+        padding-bottom: 67%;
+    }
+    @media (max-aspect-ratio: 1/1) and (min-width: 600px) {
+        background-position: center center;
+        padding-bottom: 67%;
+    }
+
+    &_content {
+        position: absolute;
+        bottom: 0;
+        padding: 0 0 22px;
+
+        .hero_title {
+            color: #d11975;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .hero_subtitle {
+            font-size: 20px;
+            text-shadow: none;
+            margin: 0;
+        }
+    }
+
+    .container {
+        position: static;
+    }
+
+    background-image: url(/news/special/2016/newsspec_13329/content/english/img/0-599_hero.png);
+    // TODO: add svg
+    // background-image: url(data:image/svg+xml,);
+}
+
+.story_meta {
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 14px;
+    &_list {
+        margin: 0;
+        padding: 0;
+        &_item {
+            border-right: 1px solid #dcdcdc;
+            display: inline-block;
+            margin-right: .2em;
+            padding-right: .5em;
+            margin-bottom: 2px;
+            margin-top: 2px;
+            white-space: nowrap;
+            &:last-child {
+                border-right: none;
+                margin-right: 0;
+                padding-right: 0;
+            }
+            &-timestamp {
+                background-image: url(../img/boilerplate-icons-sprite.png);
+                background-repeat: no-repeat;
+                background-position: -9px -4011px;
+                padding-left: 1.375em;
+            }
+            &-topic a {
+                color: #cc0101;
+                text-decoration: none;
+                &:active, &:focus, &:hover {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.worldmap {
+    &_title {
+        font-weight: bold;
+    }
+}
+
+.app-popularity-chart {
+    position: relative;
+    width: 304px;
+    margin: 16px auto;
+    &_bar {
+        display: table;
+        &_label {
+            text-align: right;
+            display: table-cell;
+            vertical-align: top;
+            width: 64px;
+            max-width: 64px;
+            height: 20px;
+            border-right: solid 2px #000;
+            padding-right: 14px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &_value {
+            position: relative;
+            height: 20px;
+            margin: 0 0 8px;
+            span {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+            }
+        }
+        &-1 {
+            .app-popularity-chart_bar_value {
+                width: (210px * (23 / 23));
+                background-color: #ff8c3f;
+                span {
+                    left: (210px * (23 / 23) + 8px);
+                }
+            }
+        }
+        &-2 {
+            .app-popularity-chart_bar_value {
+                width: (210px * (18 / 23));
+                background-color: #d83f3f;
+                span {
+                    left: (210px * (18 / 23) + 8px);
+                }
+            }
+        }
+        &-3 {
+            .app-popularity-chart_bar_label {
+                height: 20px;
+            }
+            .app-popularity-chart_bar_value {
+                width: (210px * (11 / 23));
+                background-color: #c4c4c4;
+                margin: 0;
+                span {
+                    left: (210px * (11 / 23) + 8px);
+                }
+            }
+        }
+    }
+}
+
+@include respondMinMax(600px, false) {
+    .hero {
+        &_content {
+            min-width: 592px;
+            .hero_title {
+                font-size: 68px;
+            }
+
+            .hero_subtitle {
+                font-size: 24px;
+            }
+        }
+
+        background-image: url(/news/special/2016/newsspec_13329/content/english/img/600-799_hero.png);
+        // TODO: add svg
+        // background-image: url(data:image/svg+xml,);
+    }
+
+    .app-popularity-chart {
+        width: 576px;
+        &_bar {
+            &_label {
+                width: 72px;
+                max-width: 72px;
+                font-size: 18px;
+            }
+            &-1 {
+                .app-popularity-chart_bar_value {
+                    width: (474px * (23 / 23));
+                    span {
+                        left: (474px * (23 / 23) + 8px);
+                    }
+                }
+            }
+            &-2 {
+                .app-popularity-chart_bar_value {
+                    width: (474px * (18 / 23));
+                    span {
+                        left: (474px * (18 / 23) + 8px);
+                    }
+                }
+            }
+            &-3 {
+                .app-popularity-chart_bar_value {
+                    width: (474px * (11 / 23));
+                    span {
+                        left: (474px * (11 / 23) + 8px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respondMinMax(625px, false) {
+    .hero_content {
+        .hero_title {
+            font-size: 72px;
+        }
+    }
+}
+
+@include respondMinMax(800px, false) {
+    .hero {
+        background-image: url(/news/special/2016/newsspec_13329/content/english/img/800-1280_hero.png);
+        // TODO: add svg
+        // background-image: url(data:image/svg+xml,);
+    }
+}
+
+@include respondMinMax(1280px, false) {
+    .story_meta {
+        position: absolute;
+        left: -230px;
+        border-right: solid 1px #dcdcdc;
+        width: 226px;
+        &_list {
+            &_item {
+                border: none;
+                display: block;
+                padding-left: 1.375em;
+            }
+        }
+    }
+}
