@@ -1,12 +1,18 @@
 <section class="section section-asia">
     <div class="container">
         <h2 class="section_title">{{= section_3_subtitle }}</h2>
-        <img src="http://placehold.it/616x350">
+        <div class="section_map">
+            <img class="section_map_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/4_asia/asia_map_480.png" alt="">
+            <img class="section_map_desktop" src="{{= pathStatic }}/{{= vocab_dir }}/img/4_asia/asia_map_624.png" alt="">
+        </div>
 
         <p>{{= section_3_paragraph_map }}</p>
 
         <div class="section_quote section_quote-left section_quote-pink">
-            <div class="section_quote_profilephoto"></div>
+            <div class="section_quote_profilephoto">
+                <img class="section_quote_profilephoto_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/4_asia/0-599_profile_asia.png" alt="">
+                <img class="section_quote_profilephoto_desktop" src="{{= pathStatic }}/{{= vocab_dir }}/img/4_asia/shruti_nitin.jpg" alt="">
+            </div>
             <blockquote>
                 {{= section_3_blockquote }}
                 <cite>{{= section_3_blockquote_credit }}</cite>
@@ -20,6 +26,6 @@
 
         <p>{{= section_3_paragraph_video }}</p>
 
-        <h2>{{= section_3_summary }}</h2>
+        <h3 class="section_summary section_summary-pink">{{= section_3_summary }}</h3>
     </div>
 </section>

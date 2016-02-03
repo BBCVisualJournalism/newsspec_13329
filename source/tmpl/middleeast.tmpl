@@ -1,12 +1,17 @@
 <section class="section section-middleeast">
     <div class="container">
         <h2 class="section_title">{{= section_4_subtitle }}</h2>
-        <img src="http://placehold.it/616x350">
+        <div class="section_map">
+            <img class="section_map_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/5_middle_east/middle_east_map_480.png" alt="">
+            <img class="section_map_desktop" src="{{= pathStatic }}/{{= vocab_dir }}/img/5_middle_east/middle_east_map_624.png" alt="">
+        </div>
 
         <p>{{= section_4_paragraph_map }}</p>
 
         <div class="section_quote section_quote-right section_quote-blue">
-            <div class="section_quote_profilephoto"></div>
+            <div class="section_quote_profilephoto">
+                <img class="section_quote_profilephoto_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/5_middle_east/0-599_profile_middle_east.png" alt="">
+            </div>
             <blockquote>
                 {{= section_4_blockquote }}
                 <cite>{{= section_4_blockquote_credit }}</cite>
@@ -20,6 +25,6 @@
 
         <p>{{= section_4_paragraph_video }}</p>
 
-        <h2>{{= section_4_summary }}</h2>
+        <h3 class="section_summary section_summary-blue">{{= section_4_summary }}</h3>
     </div>
 </section>

@@ -1,12 +1,18 @@
 <section class="section section-europe">
     <div class="container">
         <h2 class="section_title">{{= section_2_subtitle }}</h2>
-        <img src="http://placehold.it/616x350">
+        <div class="section_map">
+            <img class="section_map_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/3_europe/europe_map_480.png" alt="">
+            <img class="section_map_desktop" src="{{= pathStatic }}/{{= vocab_dir }}/img/3_europe/europe_map_624.png" alt="">
+        </div>
 
         <p>{{= section_2_paragraph_map }}</p>
 
         <div class="section_quote section_quote-right section_quote-red">
-            <div class="section_quote_profilephoto"></div>
+            <div class="section_quote_profilephoto">
+                <img class="section_quote_profilephoto_mobile" src="{{= pathStatic }}/{{= vocab_dir }}/img/3_europe/0-599_profile_europe.png" alt="">
+                <img class="section_quote_profilephoto_desktop" src="{{= pathStatic }}/{{= vocab_dir }}/img/3_europe/andy.jpg" alt="">
+            </div>
             <blockquote>
                 {{= section_2_blockquote }}
                 <cite>{{= section_2_blockquote_credit }}</cite>
@@ -20,6 +26,6 @@
 
         <p>{{= section_2_paragraph_video }}</p>
 
-        <h2>{{= section_2_summary }}</h2>
+        <h3 class="section_summary section_summary-red">{{= section_2_summary }}</h3>
     </div>
 </section>

@@ -1,0 +1,235 @@
+.section {
+    margin-top: 1.5em;
+
+    &_title {
+        font-size: 20px;
+        line-height: 1.5;
+        padding-top: 5px;
+        width: 50%;
+        margin-bottom: 0;
+        border-top: 1px solid #888;
+    }
+
+    &_map {
+        &_mobile {
+            display: block;
+        }
+        &_desktop {
+            display: none;
+        }
+    }
+
+    &_quote {
+        &_profilephoto {
+            margin: 0 32px;
+            max-width: 400px;
+            @media (min-width: 480px) {
+                margin: 0 auto;
+            }
+            &_mobile {
+                display: block;
+            }
+            &_desktop {
+                display: none;
+            }
+        }
+        blockquote {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: bold;
+            margin-right: 2em;
+            margin-bottom: 1.75em;
+            margin-left: 1em;
+            margin-top: -1.5em;
+            &::before {
+                content: '‘‘';
+                display: block;
+                font-size: 64px;
+                letter-spacing: -6px;
+                margin-top: 48px;
+                margin-bottom: -8px;
+                margin-left: -4px;
+            }
+        }
+        cite {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #999;
+            display: block;
+            font-weight: normal;
+            font-style: normal;
+            margin-top: 0.5em;
+        }
+    }
+
+    &_summary {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 2em;
+    }
+}
+
+@include respondMinMax(600px, false) {
+    .section {
+        &_title {
+            font-size: 24px;
+        }
+
+        &_map {
+            &_mobile {
+                display: none;
+            }
+            &_desktop {
+                display: block;
+            }
+        }
+
+        &_quote {
+            background-repeat: no-repeat;
+            background-size: 48% auto;
+            height: 320px;
+            position: relative;
+            blockquote {
+                border-top-style: solid;
+                border-top-width: 8px;
+                width: 50%;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 1em;
+                font-size: 26px;
+                line-height: 32px;
+                &::before {
+                    font-size: 84px;
+                }
+            }
+
+            &_profilephoto {
+                position: absolute;
+                height: 126px;
+                width: 224px;
+                margin: 0;
+                top: 37px;
+                &_mobile {
+                    display: none;
+                }
+                &_desktop {
+                    display: block;
+                }
+            }
+
+            &-right {
+                background-position: left;
+                blockquote {
+                    float: right;
+                }
+                .section_quote_profilephoto {
+                    left: 34px;
+                }
+            }
+
+            &-left {
+                background-position: right;
+                blockquote {
+                    float: left;
+                }
+                .section_quote_profilephoto {
+                    right: 34px;
+                }
+            }
+
+            &-red {
+                background-image: url(../img/3_europe/europe_hand-28.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #ea9898;
+                }
+            }
+            &-pink {
+                background-image: url(../img/4_asia/hand_asia.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #ea98c1;
+                }
+            }
+            &-blue {
+                background-image: url(../img/5_middle_east/hand_middle_east.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #adc1ea;
+                }
+            }
+            &-orange {
+                background-image: url(../img/6_south_america/hand_south_america.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #ffc198;
+                }
+            }
+            &-green {
+                background-image: url(../img/8_africa/hand_africa.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #98d6ad;
+                }
+            }
+            &-teal {
+                background-image: url(../img/7_north_america/hand_north_america.png);
+                // TODO: add svg
+                // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
+                blockquote {
+                    border-top-color: #98d6d6;
+                }
+            }
+        }
+
+        &_summary {
+            position: relative;
+            padding-top: 63px;
+            font-size: 26px;
+            &::before {
+                content: '';
+                display: block;
+                width: 49px;
+                height: 55px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-red {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-29.png) no-repeat;
+                }
+            }
+            &-pink {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-34.png) no-repeat;
+                }
+            }
+            &-blue {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-33.png) no-repeat;
+                }
+            }
+            &-orange {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-30.png) no-repeat;
+                }
+            }
+            &-teal {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-31.png) no-repeat;
+                }
+            }
+            &-green {
+                &::before {
+                    background: url(../img/10_data_hearts/dating_apps_responsive_final-32.png) no-repeat;
+                }
+            }
+        }
+    }
+}

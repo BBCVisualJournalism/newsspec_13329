@@ -44,9 +44,9 @@
         position: static;
     }
 
-    background-image: url(/news/special/2016/newsspec_13329/content/english/img/0-599_hero.png);
+    background-image: url(../img/1_hero/0-599_hero.png);
     // TODO: add svg
-    // background-image: url(data:image/svg+xml,);
+    // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
 }
 
 .story_meta {
@@ -170,9 +170,9 @@
             }
         }
 
-        background-image: url(/news/special/2016/newsspec_13329/content/english/img/600-799_hero.png);
+        background-image: url(../img/1_hero/600-799_hero.png);
         // TODO: add svg
-        // background-image: url(data:image/svg+xml,);
+        // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
     }
 
     .app-popularity-chart {
@@ -221,9 +221,9 @@
 
 @include respondMinMax(800px, false) {
     .hero {
-        background-image: url(/news/special/2016/newsspec_13329/content/english/img/800-1280_hero.png);
+        background-image: url(../img/1_hero/800-1280_hero.png);
         // TODO: add svg
-        // background-image: url(data:image/svg+xml,);
+        // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
     }
 }
 

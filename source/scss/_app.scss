@@ -2,14 +2,8 @@
 .main {
     color: #222;
     line-height: 1.25;
-    
-    img {
-        width: 100%;
-    }
-
-    p {
-        font-size: 16px;
-    }
+    img { width: 100%; }
+    p { font-size: 16px; }
 }
 
 .container {
@@ -20,11 +14,13 @@
     position: relative;
 }
 
+.clearfix {
+    clear: both;
+}
+
 @include respondMinMax(600px, false) {
     .main {
-        p {
-            font-size: 18px;
-        }
+        p { font-size: 18px; }
     }
 
     .container {
