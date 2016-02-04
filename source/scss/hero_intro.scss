@@ -49,38 +49,44 @@
     // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
 }
 
-.story_meta {
-    padding: 0;
-    margin: 0;
-    display: block;
-    font-size: 14px;
-    &_list {
-        margin: 0;
+.story {
+    &_intro {
+        font-weight: bold;
+    }
+
+    &_meta {
         padding: 0;
-        &_item {
-            border-right: 1px solid #dcdcdc;
-            display: inline-block;
-            margin-right: .2em;
-            padding-right: .5em;
-            margin-bottom: 2px;
-            margin-top: 2px;
-            white-space: nowrap;
-            &:last-child {
-                border-right: none;
-                margin-right: 0;
-                padding-right: 0;
-            }
-            &-timestamp {
-                background-image: url(../img/boilerplate-icons-sprite.png);
-                background-repeat: no-repeat;
-                background-position: -9px -4011px;
-                padding-left: 1.375em;
-            }
-            &-topic a {
-                color: #cc0101;
-                text-decoration: none;
-                &:active, &:focus, &:hover {
-                    color: #333;
+        margin: 0;
+        display: block;
+        font-size: 14px;
+        &_list {
+            margin: 0;
+            padding: 0;
+            &_item {
+                border-right: 1px solid #dcdcdc;
+                display: inline-block;
+                margin-right: .2em;
+                padding-right: .5em;
+                margin-bottom: 2px;
+                margin-top: 2px;
+                white-space: nowrap;
+                &:last-child {
+                    border-right: none;
+                    margin-right: 0;
+                    padding-right: 0;
+                }
+                &-timestamp {
+                    background-image: url(../img/boilerplate-icons-sprite.png);
+                    background-repeat: no-repeat;
+                    background-position: -9px -4011px;
+                    padding-left: 1.375em;
+                }
+                &-topic a {
+                    color: #cc0101;
+                    text-decoration: none;
+                    &:active, &:focus, &:hover {
+                        color: #333;
+                    }
                 }
             }
         }
