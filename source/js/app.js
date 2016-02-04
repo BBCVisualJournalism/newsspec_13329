@@ -11,13 +11,14 @@ define([
         domain = 'http://news.bbcimg.co.uk';
 
     var videos = [
-        {selector: 'story-media-2-faux', videoId: 'p02vwc5l', background: true, autoplay: true},
-        {selector: 'story-media-2', videoId: 'p02w04xg'},
-        {selector: 'story-media-3', videoId: 'p03bm6n9'},
-        {selector: 'story-media-4', videoId: 'p03bm6n9'},
-        {selector: 'story-media-5', videoId: 'p03bm6n9'},
-        {selector: 'story-media-6', videoId: 'p03bm6n9'},
-        {selector: 'story-media-7', videoId: 'p03bm6n9'}
+        {selector: 'story-media-2-faux', videoId: 'p03hdp5k', background: true, autoplay: true},
+        {selector: 'story-media-2', videoId: 'p03h7p1t'},
+        {selector: 'story-media-3-faux', videoId: 'p03hdpwr', background: true, autoplay: true},
+        {selector: 'story-media-3', videoId: 'p03hdclq'},
+        {selector: 'story-media-5-faux', videoId: 'p03hdpct', background: true, autoplay: true},
+        {selector: 'story-media-5', videoId: 'p03hdccz'},
+        {selector: 'story-media-7-faux', videoId: 'p03hdpzw', background: true, autoplay: true},
+        {selector: 'story-media-7', videoId: 'p03hdcdj'}
     ];
 
     var renderVideo = function (indexNumber) {

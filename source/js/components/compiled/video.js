@@ -36,7 +36,8 @@ define([
             });
             var $mp = $('#' + this.props.selector).player(updatedSettings);
 
-            if (this.props.selector === 'story-media-2') {
+            var regex = new RegExp('^story-media-[\\d]$');
+            if (regex.test(this.props.selector)) {
                 var overlay = news.$('#' + this.props.selector + '-placeholder').html();
                 news.$('#' + this.props.selector + '-placeholder').remove();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);

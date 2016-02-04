@@ -22,7 +22,16 @@
 
         <p>{{= section_3_paragraph_quote }}</p>
 
-        <div class="story-media-small" id="story-media-3-container"></div>
+        <div class="story-media-small" id="story-media-3-faux-container"></div>
+        <div class="story-media-small hidden" id="story-media-3-container"></div>
+        <div class="story-media-placeholder" id="story-media-3-placeholder">
+            <div class="story-media-video-overlay">
+                <button class="story-media-play-button"></button>
+                <div class="story-media-title">{{= section_3_video_title }}
+                    <span class="story-media-subtitle">{{= section_3_video_subtitle }}</span>
+                </div>
+            </div>
+        </div>
 
         <p>{{= section_3_paragraph_video }}</p>
 
