@@ -19,4 +19,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shared-config');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-react');
 };

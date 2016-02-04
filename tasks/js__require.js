@@ -6,7 +6,9 @@ module.exports = function (grunt) {
     // *************************************************************************
 
     var amdModulePaths = {
-        'pubsub': './lib/vendors/jquery/pubsub'
+        'pubsub': './lib/vendors/jquery/pubsub',
+        'istats-1': 'empty:',
+        'bump-3': 'empty:'
     };
 
     // *************************************************************************
@@ -15,9 +17,15 @@ module.exports = function (grunt) {
     // *************************************************************************
 
     var _ = require('lodash-node'),
-        requirePathsForJquery1build = _.merge({'jquery': './lib/vendors/jquery/jquery-1.9.1'}, amdModulePaths);
-        requirePathsForJquery2build = _.merge({'jquery': './lib/vendors/jquery/jquery-2.0.3'}, amdModulePaths);
-    
+        requirePathsForJquery1build = _.merge({
+            'jquery': './lib/vendors/jquery/jquery-1.11.3',
+            'underscore': './lib/vendors/underscore/underscore-1.8.3.min'
+        }, amdModulePaths);
+        requirePathsForJquery2build = _.merge({
+            'jquery': './lib/vendors/jquery/jquery-2.1.4',
+            'underscore': './lib/vendors/underscore/underscore-1.8.3.min'
+        }, amdModulePaths);
+
     grunt.config(['amdModulePaths'], amdModulePaths);
     grunt.config(['requirejs', 'jquery1'], {
         options: {

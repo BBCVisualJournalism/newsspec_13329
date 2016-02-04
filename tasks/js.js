@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     }
 
     grunt.config(['concurrent', 'js'], {
-        tasks: ['jshint', 'jasmine'].concat(applicationJS)
+        tasks: ['jshint'].concat(applicationJS)
     });
-    grunt.registerTask('js', ['clean:allJs', 'overrideImagerImageSizes', 'concurrent:js', 'copyRequiredJs']);
+    grunt.registerTask('js', ['clean:allJs', 'overrideImagerImageSizes', 'react', 'concurrent:js', 'copyRequiredJs']);
 };
