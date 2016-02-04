@@ -1,27 +1,43 @@
-<div class="ns_creditsHolder">
-	<div class="ns_creditsLineThin"></div>
-	<h2>{{= credits_title }}</h2>
-	<p>{{= credits }}</p>
-	<h2 class="ns_shareThisStoryTitle">{{= share_title }} <a href="http://www.bbc.co.uk/help/web/sharing.shtml">{{= about_sharing }}</a></h2>
-	<a href="mailto:?subject=<!-- urlencodeme-start -->{{= share_title }}<!-- urlencodeme-end -->&amp;body=<!-- urlencodeme-start -->{{= share_description }} {{= share_url }}<!-- urlencodeme-end -->" class="ns_shareIconLink ns_shareEmailIcon">
-		<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/email.png" alt="email share">
-	</a>
-	<a href="https://www.facebook.com/sharer/sharer.php?u=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->" class="ns_shareIconLink ns_shareFacebookIcon">
-		<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/facebook.png" alt="facebook share">
-	</a>
-	<a href="https://twitter.com/intent/tweet?text=<!-- urlencodeme-start -->{{= twitter_message }}<!-- urlencodeme-end -->&amp;url=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->" data-social-url="https://twitter.com/intent/tweet?text=<!-- urlencodeme-start -->{{= twitter_message }}<!-- urlencodeme-end -->&amp;url=" data-target-url="<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->" class="ns_shareIconLink ns_shareTwitterIcon">
-		<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/twitter.png" alt="twitter share">
-	</a>
-	<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->&amp;title=<!-- urlencodeme-start -->{{= share_title }}<!-- urlencodeme-end -->&amp;summary=<!-- urlencodeme-start -->{{= share_description }}<!-- urlencodeme-end -->&amp;source=<!-- urlencodeme-start -->BBC News<!-- urlencodeme-end -->" class="ns_shareIconLink ns_shareLinkedInIcon">
-		<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/linkedin.png" alt="linked in share">
-	</a>
-	<div class="ns_onwardJourneys">
-		<div class="ns_creditsLineThick"></div>
-		<h2>More on this story</h2>
-		<div class="ns_creditsLineThin"></div>
-		<a href="">related link 1</a>
-		<a href="">related link 2</a>
-		<a href="">related link 3</a>
-		<span>The BBC is not responsible for the content of external Internet sites</span>
+<footer class="section footer">
+	<div class="container">
+		<hr class="footer_line-thin">
+
+		<h2 class="footer_title">{{= credits_title }}</h2>
+		<p>{{= credits }}</p>
+
+		<h2 class="footer_title">
+			{{= share_this_story }} <a class="footer_title_smalllink" href="{{= about_sharing_link }}">{{= about_sharing }}</a>
+		</h2>
+		<ul class="footer_share">
+			<li>
+				<a class="footer_share_link footer_share_link-email" href="mailto:?subject=<!-- urlencodeme-start -->{{= share_title }}<!-- urlencodeme-end -->&amp;body=<!-- urlencodeme-start -->{{= share_description }} {{= share_url }}<!-- urlencodeme-end -->">
+					<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/email.png" alt="email share">
+				</a>
+			</li>
+			<li>
+				<a class="footer_share_link footer_share_link-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->">
+					<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/facebook.png" alt="facebook share">
+				</a>
+			</li>
+			<li>
+				<a class="footer_share_link footer_share_link-twitter" href="https://twitter.com/intent/tweet?text=<!-- urlencodeme-start -->{{= twitter_message }}<!-- urlencodeme-end -->&amp;url=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->" data-social-url="https://twitter.com/intent/tweet?text=<!-- urlencodeme-start -->{{= twitter_message }}<!-- urlencodeme-end -->&amp;url=" data-target-url="<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->">
+					<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/twitter.png" alt="twitter share">
+				</a>
+			</li>
+			<li>
+				<a class="footer_share_link footer_share_link-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<!-- urlencodeme-start -->{{= share_url }}<!-- urlencodeme-end -->&amp;title=<!-- urlencodeme-start -->{{= share_title }}<!-- urlencodeme-end -->&amp;summary=<!-- urlencodeme-start -->{{= share_description }}<!-- urlencodeme-end -->&amp;source=<!-- urlencodeme-start -->BBC News<!-- urlencodeme-end -->">
+					<img src="{{= pathStatic }}/{{= vocab_dir }}/img/share-icons/linkedin.png" alt="linked in share">
+				</a>
+			</li>
+		</ul>
+
+		<div class="footer_onwardjourney">
+			<hr class="footer_line-thick">
+			<h2 class="footer_title">{{= onward_journey_title }}</h2>
+			<hr class="footer_line-thin">
+			<ul class="footer_onwardjourney_links">
+				<li><a class="footer_onwardjourney_links_link" href="{{= onward_journey_link_1 }}">{{= onward_journey_text_1 }}</a></li>
+			</ul>
+		</div>
 	</div>
-</div>
+</footer>
