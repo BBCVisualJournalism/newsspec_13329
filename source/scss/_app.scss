@@ -18,6 +18,10 @@
     clear: both;
 }
 
+.b-g-p {
+    box-sizing: content-box;
+}
+
 @include respondMinMax(600px, false) {
     .main {
         p { font-size: 18px; }
