@@ -44,7 +44,7 @@
         position: static;
     }
 
-    background-image: url(../img/1_hero/0-599_hero.png);
+    background-image: url(../img/1_hero/dating_apps_responsive_final_0-599_hero.png);
     // TODO: add svg
     // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
 }
@@ -125,19 +125,19 @@
         }
         &-1 {
             .app-popularity-chart_bar_value {
-                width: (210px * (23 / 23));
+                width: (210px * (21 / 21));
                 background-color: #ff8c3f;
                 span {
-                    left: (210px * (23 / 23) + 8px);
+                    left: (210px * (21 / 21) + 8px);
                 }
             }
         }
         &-2 {
             .app-popularity-chart_bar_value {
-                width: (210px * (18 / 23));
+                width: (210px * (18 / 21));
                 background-color: #d83f3f;
                 span {
-                    left: (210px * (18 / 23) + 8px);
+                    left: (210px * (18 / 21) + 8px);
                 }
             }
         }
@@ -146,11 +146,11 @@
                 height: 20px;
             }
             .app-popularity-chart_bar_value {
-                width: (210px * (11 / 23));
+                width: (210px * (11 / 21));
                 background-color: #c4c4c4;
                 margin: 0;
                 span {
-                    left: (210px * (11 / 23) + 8px);
+                    left: (210px * (11 / 21) + 8px);
                 }
             }
         }
@@ -170,7 +170,7 @@
             }
         }
 
-        background-image: url(../img/1_hero/600-799_hero.png);
+        background-image: url(../img/1_hero/dating_apps_responsive_final_600-799_hero.png);
         // TODO: add svg
         // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
     }
@@ -185,25 +185,25 @@
             }
             &-1 {
                 .app-popularity-chart_bar_value {
-                    width: (474px * (23 / 23));
+                    width: (474px * (21 / 21));
                     span {
-                        left: (474px * (23 / 23) + 8px);
+                        left: (474px * (21 / 21) + 8px);
                     }
                 }
             }
             &-2 {
                 .app-popularity-chart_bar_value {
-                    width: (474px * (18 / 23));
+                    width: (474px * (18 / 21));
                     span {
-                        left: (474px * (18 / 23) + 8px);
+                        left: (474px * (18 / 21) + 8px);
                     }
                 }
             }
             &-3 {
                 .app-popularity-chart_bar_value {
-                    width: (474px * (11 / 23));
+                    width: (474px * (11 / 21));
                     span {
-                        left: (474px * (11 / 23) + 8px);
+                        left: (474px * (11 / 21) + 8px);
                     }
                 }
             }
@@ -221,7 +221,7 @@
 
 @include respondMinMax(800px, false) {
     .hero {
-        background-image: url(../img/1_hero/800-1280_hero.png);
+        background-image: url(../img/1_hero/dating_apps_responsive_final_800-1280_hero.png);
         // TODO: add svg
         // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
     }
