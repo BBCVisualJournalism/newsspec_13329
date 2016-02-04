@@ -11,7 +11,8 @@ define([
         domain = 'http://news.bbcimg.co.uk';
 
     var videos = [
-        {selector: 'story-media-2', videoId: 'p03bm6n9'},
+        {selector: 'story-media-2-faux', videoId: 'p02vwc5l', background: true, autoplay: true},
+        {selector: 'story-media-2', videoId: 'p02w04xg'},
         {selector: 'story-media-3', videoId: 'p03bm6n9'},
         {selector: 'story-media-4', videoId: 'p03bm6n9'},
         {selector: 'story-media-5', videoId: 'p03bm6n9'},
@@ -23,7 +24,7 @@ define([
         setTimeout(function () {
             var item = videos[indexNumber];
             React.render(React.createElement(Video, item), document.getElementById(item['selector'] + '-container'));
-        }, 850 * i);
+        }, 850 * indexNumber);
     };
 
     for (var i = 0; i < videos.length; i++) {

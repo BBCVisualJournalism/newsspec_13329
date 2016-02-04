@@ -28,42 +28,6 @@ define([
             };
         },
 
-        headerScrolls: function () {
-            var that = this;
-            var controller = new ScrollMagic.Controller();
-            var windowHeight = news.$(window).height();
-            var section3Offset = news.$('#section-3').offset().top;
-
-            // MOVE THIS TO HEADER COMPONENT
-            var headerStop = new ScrollMagic.Scene({triggerElement: '#section-3', triggerHook: 'onEnter', duration: windowHeight})
-                .addTo(controller)
-                .on('enter', function (e) {
-                    if (e.scrollDirection === 'REVERSE') that.state.mp.play();
-                })
-                .on('leave', function (e) {
-                    if (e.scrollDirection === 'FORWARD') that.state.mp.stop();
-                });
-            // MOVE THIS TO HEADER COMPONENT
-        },
-
-        bottomScrolls: function() {
-            var that = this;
-            var controller = new ScrollMagic.Controller();
-            var windowHeight = news.$(window).height();
-
-            var bottomStop = new ScrollMagic.Scene({
-                triggerElement: '#section-media-9-3-container',
-                triggerHook: 'onEnter',
-                duration: windowHeight * 2
-            }).addTo(controller)
-                .on('enter', function(e) {
-                    that.state.mp.play();
-                })
-                .on('leave', function(e) {
-                    that.state.mp.stop();
-                });
-        },
-
         componentDidMount: function() {
             var updatedSettings = _.extend(this.state.settings, {
                 playlistObject: {
@@ -72,22 +36,11 @@ define([
             });
             var $mp = $('#' + this.props.selector).player(updatedSettings);
 
-            // MOVE THIS TO HEADER COMPONENT?
-            if (this.props.selector === 'header-video') {
-                $('#header-video-wrapper').height(news.$(window).height());
-                $('#header-video-container').height(news.$(window).height());
-                this.headerScrolls();
-            }
-
-            if (this.props.selector === 'section-media-8') {
-                var overlay = $('#section-media-8-placeholder').html();
-                $('#section-media-8-placeholder').remove();
-                $('#section-media-8-faux-container').append(overlay);
-                $('#section-media-8-faux-container').on('click', this.playVideo.bind(this));
-            }
-
-            if (this.props.selector === 'section-media-9-3') {
-                this.bottomScrolls();
+            if (this.props.selector === 'story-media-2') {
+                var overlay = news.$('#' + this.props.selector + '-placeholder').html();
+                news.$('#' + this.props.selector + '-placeholder').remove();
+                news.$('#' + this.props.selector + '-faux-container').append(overlay);
+                news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
             }
 
             this.setState({
@@ -101,9 +54,9 @@ define([
             var that = this;
             var event = new Event('videoPlaying');
             window.dispatchEvent(event);
-            $('#' + this.props.selector + '-container').find('.section-media-video-overlay').hide();
+            $('#' + this.props.selector + '-container').find('.story-media-video-overlay').hide();
             $('#' + this.props.selector + '-faux-container').hide();
-            $('#' + this.props.selector + '-container').addClass('show');
+            $('#' + this.props.selector + '-container').removeClass('hidden');
             setTimeout(function () {
                 that.state.mp.play();
             }, 500);
@@ -111,9 +64,9 @@ define([
         },
 
         videoEnded: function () {
-            $('#' + this.props.selector + '-container').find('.section-media-video-overlay').show();
+            $('#' + this.props.selector + '-container').find('.story-media-video-overlay').show();
             $('#' + this.props.selector + '-faux-container').show();
-            $('#' + this.props.selector + '-container').removeClass('show');
+            $('#' + this.props.selector + '-container').addClass('hidden');
             //news.istats.log('video-ended', 'newsspec-nonuser');
         },
 
@@ -129,8 +82,8 @@ define([
             var aidi = this.props.selector;
 
             return (
-                <div className='section-video-wrapper'>
-                    <div id={aidi} className='section-video'></div>
+                <div className='section_videowrapper'>
+                    <div id={aidi} className='section_video'></div>
                 </div>
             );
         }
