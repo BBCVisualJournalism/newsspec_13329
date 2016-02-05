@@ -1,7 +1,7 @@
-module.exports = function (grunt) {
+ module.exports = function (grunt) {
 
     var fontsLookup = {
-        "afrique": "standard",
+        "french": "standard",
         "azeri": "standard",
         "bengali": "standard",
         "portuguese": "standard",
