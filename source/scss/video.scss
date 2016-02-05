@@ -4,11 +4,11 @@
     }
 
     &-placeholder {
-        opacity: 0;
+        display: none;
     }
 
     &-video-overlay {
-        bottom: 1px;
+        bottom: 0;
         left: 0;
         position: absolute;
         overflow: hidden;
@@ -22,20 +22,6 @@
     }
 
     &-play-button {
-        // background-color: #cc0000;
-        // background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button.png);
-        // background-repeat: no-repeat;
-        // background-position: center center;
-        // transition: background-color 1s;
-        // width: 64px;
-        // height: 64px;
-        // border: 0;
-        // float: left;
-        // @include respondMinMax(800px, false) {
-        //     height: 80px;
-        //     width: 80px;
-        //     background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button-large.png);
-        // }
         width: 64px;
         height: 64px;
         background-color: #000;
@@ -49,20 +35,6 @@
     }
 
     &-title {
-        // height: 36px;
-        // float: left;
-        // margin-left: 1px;
-        // background-color: #000;
-        // background-color: rgba(0,0,0,0.8);
-        // color: #fff;
-        // font-size: 20px;
-        // font-weight: bold;
-        // padding: 7px;
-        // @include respondMinMax(800px, false) {
-        //     height: 80px;
-        //     padding: 7px 20px;
-        //     font-size: 32px;
-        // }
         float: left;
         height: 64px;
         margin-left: 1px;

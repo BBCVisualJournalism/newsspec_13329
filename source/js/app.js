@@ -22,10 +22,8 @@ define([
     ];
 
     var renderVideo = function (indexNumber) {
-        setTimeout(function () {
-            var item = videos[indexNumber];
-            React.render(React.createElement(Video, item), document.getElementById(item['selector'] + '-container'));
-        }, 850 * indexNumber);
+        var item = videos[indexNumber];
+        React.render(React.createElement(Video, item), document.getElementById(item['selector'] + '-container'));
     };
 
     for (var i = 0; i < videos.length; i++) {

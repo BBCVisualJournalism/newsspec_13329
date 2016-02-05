@@ -8,12 +8,12 @@ define([
 
     var video = React.createClass({displayName: "video",
         getInitialState: function () {
-            var background = this.props.background ? 'background' : 'news';
+            var product = this.props.background ? 'background' : 'news';
             var autoplay = this.props.autoplay;
 
             var mp;
             var settings = {
-                product: background,
+                product: product,
                 playlistObject: {
                     items: []
                 },
@@ -58,9 +58,7 @@ define([
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').hide();
             $('#' + this.props.selector + '-faux-container').hide();
             $('#' + this.props.selector + '-container').removeClass('hidden');
-            setTimeout(function () {
-                that.state.mp.play();
-            }, 500);
+            that.state.mp.play();
             //news.istats.log('video-play', 'newsspec-interaction');
         },
 
@@ -74,17 +72,15 @@ define([
         videoStop: function () {
             var that = this;
             this.videoEnded();
-            setTimeout(function () {
-                that.state.mp.play();
-            }, 500);
+            that.state.mp.play();
         },
 
         render: function() {
-            var aidi = this.props.selector;
+            var id = this.props.selector;
 
             return (
                 React.createElement("div", {className: "section_videowrapper"}, 
-                    React.createElement("div", {id: aidi, className: "section_video"})
+                    React.createElement("div", {id: id, className: "section_video"})
                 )
             );
         }
