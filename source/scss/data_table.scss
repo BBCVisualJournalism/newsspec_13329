@@ -1,0 +1,56 @@
+.datatable {
+    width: 100%;
+    font-size: 16px;
+    td {
+        width: 50%;
+        padding: 4px 0;
+    }
+    th {
+        padding: 4px 0 8px;
+    }
+    thead {
+        text-align: left;
+    }
+    &-right {
+        thead {
+            display: none;
+        }
+    }
+    &_country {
+        font-weight: bold;
+    }
+}
+
+.ns_rtl {
+    .datatable {
+        thead {
+            text-align: right;
+        }
+    }
+}
+
+@include respondMinMax(600px, false) {
+    .datatable {
+        width: 50%;
+        &-left {
+            float: left;
+        }
+        &-right {
+            float: right;
+            thead {
+                display: table-header-group;
+            }
+        }
+    }
+
+    .ns_rtl {
+        .datatable {
+            &-left {
+                float: right;
+            }
+            &-right {
+                float: left;
+            }
+        }
+    }
+}
