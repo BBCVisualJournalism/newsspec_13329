@@ -8,53 +8,78 @@
     }
 
     &-video-overlay {
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         position: absolute;
         overflow: hidden;
         z-index: 20;
-    }
-
-    &-play-button {
-        background-color: #cc0000;
-        background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        transition: background-color 1s;
-        width: 36px;
-        height: 36px;
-        border: 0;
-        float: left;
-        @include respondMinMax(800px, false) {
-            height: 80px;
-            width: 80px;
-            background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button-large.png);
+        &:hover {
+            cursor: pointer;
+            .story-media-play-button {
+                background-color: #c00;
+            }
         }
     }
 
-    &-title {
-        height: 36px;
+    &-play-button {
+        // background-color: #cc0000;
+        // background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button.png);
+        // background-repeat: no-repeat;
+        // background-position: center center;
+        // transition: background-color 1s;
+        // width: 64px;
+        // height: 64px;
+        // border: 0;
+        // float: left;
+        // @include respondMinMax(800px, false) {
+        //     height: 80px;
+        //     width: 80px;
+        //     background-image: url(http://news.bbcimg.co.uk/news/special/2015/newsspec_12495/content/english/img/play-button-large.png);
+        // }
+        width: 64px;
+        height: 64px;
+        background-color: #000;
+        background-image: url(../img/play_button.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transition: background-color 500ms;
+        border: none;
         float: left;
+    }
+
+    &-title {
+        // height: 36px;
+        // float: left;
+        // margin-left: 1px;
+        // background-color: #000;
+        // background-color: rgba(0,0,0,0.8);
+        // color: #fff;
+        // font-size: 20px;
+        // font-weight: bold;
+        // padding: 7px;
+        // @include respondMinMax(800px, false) {
+        //     height: 80px;
+        //     padding: 7px 20px;
+        //     font-size: 32px;
+        // }
+        float: left;
+        height: 64px;
         margin-left: 1px;
         background-color: #000;
-        background-color: rgba(0,0,0,0.8);
         color: #fff;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
-        padding: 7px;
-        @include respondMinMax(800px, false) {
-            height: 80px;
-            padding: 7px 20px;
-            font-size: 32px;
+        padding: 8px 16px;
+        display: none;
+        @include respondMinMax(600px, false) {
+            display: block;
         }
     }
 
     &-subtitle {
-        display: none;
         font-size: 14px;
-        @include respondMinMax(800px, false) {
-            display: block;
-        }
+        font-weight: normal;
     }
 }
 
