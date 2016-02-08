@@ -42,6 +42,7 @@ define([
                 news.$('#' + this.props.selector + '-placeholder').remove();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);
                 news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
+                $mp.bind('ended playlistStopped', this.videoEnded.bind(this));
             }
 
             this.setState({
@@ -67,12 +68,6 @@ define([
             $('#' + this.props.selector + '-faux-container').show();
             $('#' + this.props.selector + '-container').addClass('hidden');
             //news.istats.log('video-ended', 'newsspec-nonuser');
-        },
-
-        videoStop: function () {
-            var that = this;
-            this.videoEnded();
-            that.state.mp.play();
         },
 
         render: function() {

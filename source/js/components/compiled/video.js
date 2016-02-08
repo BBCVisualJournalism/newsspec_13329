@@ -42,6 +42,7 @@ define([
                 news.$('#' + this.props.selector + '-placeholder').remove();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);
                 news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
+                $mp.bind('ended playlistStopped', this.videoStop.bind(this));
             }
 
             this.setState({
@@ -72,7 +73,6 @@ define([
         videoStop: function () {
             var that = this;
             this.videoEnded();
-            that.state.mp.play();
         },
 
         render: function() {
