@@ -2,8 +2,9 @@ define([
     'jquery',
     'lib/news_special/imager',
     'lib/news_special/imager_image_sizes',
+    'istats-1',
     'pubsub'
-], function ($, Imager, imageSizes) {
+], function ($, Imager, imageSizes, istats) {
 
     // responsive images
     var imager = new Imager({
@@ -20,7 +21,8 @@ define([
     return {
         $: $,
         pubsub: $,
-        sendMessageToremoveLoadingImage: function () {
+        istats: istats,
+        sendMessageToRemoveLoadingImage: function () {
             var spinner = document.getElementById('loading-spinner');
             if (spinner) {
                 spinner.parentNode.removeChild(spinner);

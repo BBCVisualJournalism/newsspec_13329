@@ -1,15 +1,9 @@
 define([
     'lib/news_special/bootstrap',
     'lib/vendors/react/react-0.14.2.min',
-    'components/compiled/video'
-], function (news, React, Video) {
-    $.emit('init_images');
-    news.sendMessageToremoveLoadingImage();
-
-    var //domain = 'http://local.bbc.co.uk:1031';
-        //domain = 'http://wwwpreview.stage.newsonline.tc.nca.bbc.co.uk';
-        domain = 'http://news.bbcimg.co.uk';
-
+    'components/compiled/video',
+    'scrollHandler'
+], function (news, React, Video, scrollHandler) {
     var videos = [
         {selector: 'story-media-2-faux', videoId: 'p03hdp5k', background: true, autoplay: true},
         {selector: 'story-media-2', videoId: 'p03h7p1t'},
@@ -29,4 +23,9 @@ define([
     for (var i = 0; i < videos.length; i++) {
         renderVideo(i);
     }
+
+    scrollHandler.init();
+    
+    $.emit('init_images');
+    news.sendMessageToRemoveLoadingImage();
 });

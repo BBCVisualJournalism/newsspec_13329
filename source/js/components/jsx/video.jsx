@@ -60,14 +60,31 @@ define([
             $('#' + this.props.selector + '-faux-container').hide();
             $('#' + this.props.selector + '-container').removeClass('hidden');
             that.state.mp.play();
-            //news.istats.log('video-play', 'newsspec-interaction');
+
+            var sectionNum = this.props.selector.substr(-1);
+            var sectionRegion;
+            switch (sectionNum) {
+            case '2':
+                sectionRegion = 'europe';
+                break;
+            case '3':
+                sectionRegion = 'asia';
+                break;
+            case '5':
+                sectionRegion = 'south-america';
+                break;
+            case '7':
+                sectionRegion = 'north-america';
+                break;
+            }
+            news.istats.log('video-played-' + sectionRegion, 'newsspec-interaction');
         },
 
         videoEnded: function () {
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').show();
             $('#' + this.props.selector + '-faux-container').show();
             $('#' + this.props.selector + '-container').addClass('hidden');
-            //news.istats.log('video-ended', 'newsspec-nonuser');
+            news.istats.log('video-ended', 'newsspec-nonuser');
         },
 
         render: function() {
