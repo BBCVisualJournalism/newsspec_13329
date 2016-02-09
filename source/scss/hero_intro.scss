@@ -163,6 +163,43 @@
     }
 }
 
+.ns_rtl {
+    .app-popularity-chart {
+        &_bar {
+            &_label {
+                padding-right: 0;
+                padding-left: 14px;
+                border-right: none;
+                border-left: solid 2px #000;
+            }
+            &-1 {
+                .app-popularity-chart_bar_value {
+                    span {
+                        left: auto;
+                        right: (210px * (21 / 21) + 8px);
+                    }
+                }
+            }
+            &-2 {
+                .app-popularity-chart_bar_value {
+                    span {
+                        left: auto;
+                        right: (210px * (18 / 21) + 8px);
+                    }
+                }
+            }
+            &-3 {
+                .app-popularity-chart_bar_value {
+                    span {
+                        left: auto;
+                        right: (210px * (11 / 21) + 8px);
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include respondMinMax(600px, false) {
     .hero {
         &_content {
@@ -210,6 +247,34 @@
                     width: (474px * (11 / 21));
                     span {
                         left: (474px * (11 / 21) + 8px);
+                    }
+                }
+            }
+        }
+    }
+
+    .ns_rtl {
+        .app-popularity-chart {
+            &_bar {
+                &-1 {
+                    .app-popularity-chart_bar_value {
+                        span {
+                            right: (474px * (21 / 21) + 8px);
+                        }
+                    }
+                }
+                &-2 {
+                    .app-popularity-chart_bar_value {
+                        span {
+                            right: (474px * (18 / 21) + 8px);
+                        }
+                    }
+                }
+                &-3 {
+                    .app-popularity-chart_bar_value {
+                        span {
+                            right: (474px * (11 / 21) + 8px);
+                        }
                     }
                 }
             }
