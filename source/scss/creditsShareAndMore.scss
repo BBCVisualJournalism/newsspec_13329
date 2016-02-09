@@ -1,22 +1,4 @@
 .footer {
-	color: #222;
-	line-height: 1.25;
-	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
-	img { width: 100%; }
-	p {
-		font-size: 16px;
-	}
-
-	a {
-		border-bottom: 1px solid #dcdcdc;
-		color: inherit;
-		text-decoration: none;
-		font-weight: bold;
-		&:hover, &:focus, &:active {
-			color: #1167a8;
-		}
-	}
-
 	&_title {
 		font-size: 24px;
 		font-weight: bold;
@@ -51,7 +33,6 @@
 			display: block;
 			border: none;
 			img {
-				width: 100%;
 				height: 100%;
 			}
 			&-email {
@@ -90,10 +71,6 @@
 
 @include respondMinMax(600px, false) {
 	.footer {
-		p {
-			font-size: 18px;
-		}
-
 		&_onwardjourney {
 			&_image {
 				width: 50%;
@@ -104,6 +81,21 @@
 			&_links {
 				width: 50%;
 				float: right;
+			}
+		}
+	}
+
+	.ns_rtl {
+		.footer {
+			&_onwardjourney {
+				&_image {
+					float: right;
+					padding-right: 0;
+					padding-left: 8px;
+				}
+				&_links {
+					float: left;
+				}
 			}
 		}
 	}
