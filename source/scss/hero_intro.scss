@@ -204,6 +204,7 @@
     .hero {
         &_content {
             min-width: 592px;
+            max-width: 822px;
             .hero_title {
                 font-size: 68px;
             }
@@ -214,8 +215,6 @@
         }
 
         background-image: url(../img/1_hero/dating_apps_responsive_final_600-799_hero.png);
-        // TODO: add svg
-        // background-image: url(data:image/svg+xml,), linear-gradient(transparent, transparent);
     }
 
     .app-popularity-chart {

@@ -251,4 +251,15 @@
             }
         }
     }
+
+    .ns_rtl {
+        .section {
+            &_summary {
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
 }
