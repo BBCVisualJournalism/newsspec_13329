@@ -7,12 +7,12 @@
         padding: 5px 0;
         width: 50%;
         margin-bottom: 0;
-        border-top: solid 1px #888;
+        border-top: solid 1px #787878;
     }
 
     &_map {
-        border-top: solid 1px #888;
-        border-bottom: solid 1px #888;
+        border-top: solid 1px #787878;
+        border-bottom: solid 1px #787878;
         &_mobile {
             display: block;
         }
@@ -107,6 +107,7 @@
             background-size: 48% auto;
             height: 320px;
             position: relative;
+            border-bottom: solid 1px #787878;
             blockquote {
                 border-top-style: solid;
                 border-top-width: 8px;
@@ -123,8 +124,8 @@
 
             &_profilephoto {
                 position: absolute;
-                height: 126px;
-                width: 224px;
+                height: 128px;
+                width: 226px;
                 margin: 0;
                 top: 37px;
                 &_mobile {
@@ -136,7 +137,7 @@
             }
 
             &-right {
-                background-position: left;
+                background-position: bottom left;
                 blockquote {
                     float: right;
                 }
@@ -146,7 +147,7 @@
             }
 
             &-left {
-                background-position: right;
+                background-position: bottom right;
                 blockquote {
                     float: left;
                 }
