@@ -32,6 +32,12 @@
     box-sizing: content-box;
 }
 
+.ns_no-js {
+    .bbc-news-visual-journalism-loading-spinner, .story-media-small {
+        display: none;
+    }
+}
+
 @include respondMinMax(600px, false) {
     .main {
         p { font-size: 18px; }

@@ -5,6 +5,8 @@ define([
     'scrollHandler'
 ], function (news, React, Video, scrollHandler) {
     var $main = news.$('.main');
+    $main.removeClass('ns_no-js');
+    
     var locale = $main.attr('data-locale');
 
     if (locale === 'en-GB') {
