@@ -52,8 +52,6 @@ define([
         },
 
         playVideo: function () {
-            var event = new Event('videoPlaying');
-            window.dispatchEvent(event);
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').hide();
             $('#' + this.props.selector + '-faux-container').addClass('undisplayed');
             $('#' + this.props.selector + '-container').removeClass('hidden');
