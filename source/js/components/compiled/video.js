@@ -28,7 +28,7 @@ define([
             };
         },
 
-        componentDidMount: function() {
+        componentDidMount: function () {
             var updatedSettings = _.extend(this.state.settings, {
                 playlistObject: {
                     items: [{vpid: this.props.videoId}]
@@ -41,6 +41,13 @@ define([
                 var overlay = news.$('#' + this.props.selector + '-placeholder').html();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);
                 news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
+
+                var self = this;
+                $mp.bind('playing', function () {
+                    $('#' + self.props.selector + '-faux-container').addClass('undisplayed');
+                    $('#' + self.props.selector + '-container').removeClass('hidden');
+                });
+                
                 $mp.bind('ended playlistStopped', this.videoEnded.bind(this));
             }
 
