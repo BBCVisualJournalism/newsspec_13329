@@ -40,14 +40,37 @@ define([
             if (regex.test(this.props.selector)) {
                 var overlay = news.$('#' + this.props.selector + '-placeholder').html();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);
+
+                // when looping poster video overlay is clicked
                 news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
 
                 var self = this;
+                // when video goes into a playing state
                 $mp.bind('playing', function () {
                     $('#' + self.props.selector + '-faux-container').addClass('undisplayed');
                     $('#' + self.props.selector + '-container').removeClass('hidden');
+                    if (!$mp.currentTime()) {   // if video is played from start (current time is 0 or NaN)
+                        var sectionNum = self.props.selector.substr(-1);
+                        var sectionRegion;
+                        switch (sectionNum) {
+                        case '2':
+                            sectionRegion = 'europe';
+                            break;
+                        case '3':
+                            sectionRegion = 'asia';
+                            break;
+                        case '5':
+                            sectionRegion = 'south-america';
+                            break;
+                        case '7':
+                            sectionRegion = 'north-america';
+                            break;
+                        }
+                        news.istats.log('video-played-' + sectionRegion, 'newsspec-interaction');
+                    }
                 });
-                
+
+                // when video reaches the end or is stopped
                 $mp.bind('ended playlistStopped', this.videoEnded.bind(this));
             }
 
@@ -63,24 +86,6 @@ define([
             $('#' + this.props.selector + '-faux-container').addClass('undisplayed');
             $('#' + this.props.selector + '-container').removeClass('hidden');
             this.state.mp.play();
-
-            var sectionNum = this.props.selector.substr(-1);
-            var sectionRegion;
-            switch (sectionNum) {
-            case '2':
-                sectionRegion = 'europe';
-                break;
-            case '3':
-                sectionRegion = 'asia';
-                break;
-            case '5':
-                sectionRegion = 'south-america';
-                break;
-            case '7':
-                sectionRegion = 'north-america';
-                break;
-            }
-            news.istats.log('video-played-' + sectionRegion, 'newsspec-interaction');
         },
 
         videoEnded: function () {
