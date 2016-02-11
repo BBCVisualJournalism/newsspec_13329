@@ -39,7 +39,6 @@ define([
             var regex = new RegExp('^story-media-[\\d]$');
             if (regex.test(this.props.selector)) {
                 var overlay = news.$('#' + this.props.selector + '-placeholder').html();
-                news.$('#' + this.props.selector + '-placeholder').remove();
                 news.$('#' + this.props.selector + '-faux-container').append(overlay);
                 news.$('#' + this.props.selector + '-faux-container').on('click', this.playVideo.bind(this));
                 $mp.bind('ended playlistStopped', this.videoEnded.bind(this));
@@ -56,7 +55,7 @@ define([
             var event = new Event('videoPlaying');
             window.dispatchEvent(event);
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').hide();
-            $('#' + this.props.selector + '-faux-container').hide();
+            $('#' + this.props.selector + '-faux-container').addClass('undisplayed');
             $('#' + this.props.selector + '-container').removeClass('hidden');
             this.state.mp.play();
 
@@ -81,7 +80,7 @@ define([
 
         videoEnded: function () {
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').show();
-            $('#' + this.props.selector + '-faux-container').show();
+            $('#' + this.props.selector + '-faux-container').removeClass('undisplayed');
             $('#' + this.props.selector + '-container').addClass('hidden');
             news.istats.log('video-ended', 'newsspec-nonuser');
         },
