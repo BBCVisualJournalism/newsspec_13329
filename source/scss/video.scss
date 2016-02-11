@@ -32,9 +32,6 @@
         transition: background-color 500ms;
         border: none;
         float: left;
-        &:focus {
-            background-color: #c00;
-        }
     }
 
     &-title {
