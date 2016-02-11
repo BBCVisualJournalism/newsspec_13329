@@ -1,12 +1,12 @@
 define(['lib/news_special/bootstrap'], function (news) {
     var sectionElements = {
         'intro': { element: news.$('.app-popularity-chart'), reached: false },
-        'europe': { element: news.$('#story-media-2-faux-container'), reached: false },
-        'asia': { element: news.$('#story-media-3-faux-container'), reached: false },
+        'europe': { element: news.$('#section_quote-europe'), reached: false },
+        'asia': { element: news.$('#section_quote-asia'), reached: false },
         'middle-east': { element: news.$('#section_quote-middleeast'), reached: false },
-        'south-america': { element: news.$('#story-media-5-faux-container'), reached: false },
+        'south-america': { element: news.$('#section_quote-southamerica'), reached: false },
         'africa': { element: news.$('#section_quote-africa'), reached: false },
-        'north-america': { element: news.$('#story-media-7-faux-container'), reached: false }
+        'north-america': { element: news.$('#section_quote-northamerica'), reached: false }
     };
 
     var init = function () {
