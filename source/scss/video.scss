@@ -3,6 +3,10 @@
         position: relative;
     }
 
+    &-faux {
+        display: none;
+    }
+
     &-placeholder {
         display: none;
     }
@@ -55,9 +59,15 @@
     }
 }
 
-.hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    opacity: 0;
+@include respondMinMax(769px, false) {
+    .story-media-faux {
+        display: block;
+    }
+
+    .hidden {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        opacity: 0;
+    }
 }

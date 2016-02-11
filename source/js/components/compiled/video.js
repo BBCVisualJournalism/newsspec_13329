@@ -53,13 +53,12 @@ define([
         },
 
         playVideo: function () {
-            var that = this;
             var event = new Event('videoPlaying');
             window.dispatchEvent(event);
             $('#' + this.props.selector + '-container').find('.story-media-video-overlay').hide();
             $('#' + this.props.selector + '-faux-container').hide();
             $('#' + this.props.selector + '-container').removeClass('hidden');
-            that.state.mp.play();
+            this.state.mp.play();
 
             var sectionNum = this.props.selector.substr(-1);
             var sectionRegion;
