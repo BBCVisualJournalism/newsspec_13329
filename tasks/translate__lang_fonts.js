@@ -27,7 +27,7 @@
         "urdu": "ar-ur",
 
         "burmese": "my",
-        "chinese": "zh-hans",
+        "chinese_simp": "zh-hans",
         "hindi": "hi",
         "nepali": "ne",
         "sinhala": "si",
@@ -57,12 +57,12 @@
 
             if (fontstackStr) {
                 var outputCssFilePaths = ['content/' + service + '/css/main.css', 'content/' + service + '/css/legacy-ie.css'],
-                    cssToPrependStr = grunt.file.read('source/scss/news_special/fonts/' + fontstackStr + '_fonts.css'),
+                    cssToAppendStr = grunt.file.read('source/scss/news_special/fonts/' + fontstackStr + '_fonts.css'),
                     sourceCssStr;
 
                 for (var a = 0;  a < outputCssFilePaths.length; a++) {
                     sourceCssStr = grunt.file.read(outputCssFilePaths[a]);
-                    grunt.file.write(outputCssFilePaths[a], cssToPrependStr + sourceCssStr);
+                    grunt.file.write(outputCssFilePaths[a], sourceCssStr + '\n' + cssToAppendStr);
                 }
             }
             else {
