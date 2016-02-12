@@ -1,6 +1,12 @@
 $fix-mqs: 1024px;
 
 @import "main";
+.hero {
+	height: auto;
+	&_content {
+		position: static;
+	}
+}
 
 .browser-notify {
 
