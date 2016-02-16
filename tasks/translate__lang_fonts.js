@@ -23,7 +23,7 @@
 
         "arabic": "ar-ur",
         "pashto": "ar-ur",
-        "persian": "ar-ur",
+        "persian": "fa",
         "urdu": "ar-ur",
 
         "burmese": "my",
